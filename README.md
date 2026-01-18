@@ -306,9 +306,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-- **Author:** Your Name
-- **Email:** your.email@example.com
-- **GitHub:** [@yourusername](https://github.com/yourusername)
+- **Author:** Rahul Tak
+- **Email:** rahul.tak.business@gmail.com
+- **GitHub:** [@Rahul-Tak-060](https://github.com/Rahul-Tak-060)
 
 ## Roadmap
 
