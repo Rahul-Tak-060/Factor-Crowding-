@@ -4,33 +4,31 @@ Welcome! This index helps you navigate all the documentation based on what you w
 
 ---
 
-## 🎯 Start Here Based on Your Goal
+## Start Here Based on Your Goal
 
-### I want to **understand what the research is about**
-📖 Read: **[EXPLANATION.md](../EXPLANATION.md)**
+### If you want to **understand what the research is about**
+ Read: **[EXPLANATION.md](../EXPLANATION.md)**
 - What factors are (Market, Size, Value, Momentum)
 - What crowding means (too many investors in same trade)
 - What we found (crowding predicts crashes with 88% accuracy)
 - How to interpret the results
 - Real-world investment implications
 
-⏱️ Time: 30-45 minutes
 
 ---
 
-### I want to **see the results quickly**
-📊 Read: **[RESULTS_SUMMARY.txt](../RESULTS_SUMMARY.txt)**
+### If you want to **see the results quickly**
+ Read: **[RESULTS_SUMMARY.txt](../RESULTS_SUMMARY.txt)**
 - Executive summary of findings
 - Key statistics and metrics
 - Main conclusions
 - Output files generated
 
-⏱️ Time: 5-10 minutes
 
 ---
 
-### I want to **learn the code architecture**
-🏗️ Read: **[CODE_ARCHITECTURE.md](CODE_ARCHITECTURE.md)**
+### If you want to **learn the code architecture**
+ Read: **[CODE_ARCHITECTURE.md](CODE_ARCHITECTURE.md)**
 - Complete codebase map
 - What each module does
 - Reading order (beginner → advanced)
@@ -38,24 +36,23 @@ Welcome! This index helps you navigate all the documentation based on what you w
 - Programming patterns used
 - How all pieces fit together
 
-⏱️ Time: 1-2 hours (comprehensive)
 
 ---
 
-### I want to **understand code line-by-line**
-💻 Read: **[CODE_WALKTHROUGH.md](CODE_WALKTHROUGH.md)**
+### If you want to **understand code line-by-line**
+ Read: **[CODE_WALKTHROUGH.md](CODE_WALKTHROUGH.md)**
 - Annotated code examples
 - Line-by-line explanations
 - Why decisions were made
 - Common patterns
 - Deep technical details
 
-⏱️ Time: 2-3 hours (very detailed)
+
 
 ---
 
-### I want to **do something specific** (copy-paste recipes)
-🔧 Read: **[QUICK_REFERENCE.md](QUICK_REFERENCE.md)**
+### If you want to **do something specific** (copy-paste recipes)
+ Read: **[QUICK_REFERENCE.md](QUICK_REFERENCE.md)**
 - Load and analyze data
 - Create custom crowding measures
 - Make visualizations
@@ -63,33 +60,30 @@ Welcome! This index helps you navigate all the documentation based on what you w
 - Export results
 - Debug common issues
 
-⏱️ Time: 5 minutes per task
 
 ---
 
-### I want to **use the tool** (not read code)
-📘 Read: **[README.md](../README.md)**
+### If you want to **use the tool** (not read code)
+ Read: **[README.md](../README.md)**
 - Installation instructions
 - How to run the CLI
 - Example commands
 - Project structure overview
 
-⏱️ Time: 10-15 minutes
 
 ---
 
-### I want to **contribute code**
-🤝 Read: **[CONTRIBUTING.md](../CONTRIBUTING.md)**
+### If you want to **contribute code**
+ Read: **[CONTRIBUTING.md](../CONTRIBUTING.md)**
 - Development setup
 - Code style guidelines
 - Testing requirements
 - Pull request process
 
-⏱️ Time: 15-20 minutes
 
 ---
 
-## 📚 Suggested Learning Paths
+##  Suggested Learning Paths
 
 ### Path 1: **Non-Technical User** (Understand research only)
 1. [RESULTS_SUMMARY.txt](../RESULTS_SUMMARY.txt) - Quick overview
@@ -151,7 +145,7 @@ Welcome! This index helps you navigate all the documentation based on what you w
 
 ---
 
-## 📖 Documentation Files Overview
+## Documentation Files Overview
 
 | File | Purpose | Audience | Length |
 |------|---------|----------|--------|
@@ -165,7 +159,7 @@ Welcome! This index helps you navigate all the documentation based on what you w
 
 ---
 
-## 🗂️ Code Organization
+##  Code Organization
 
 ```
 factor_crowding/
@@ -195,13 +189,13 @@ factor_crowding/
 ```
 
 **Complexity Level**:
-- 🟢 Beginner: config.py, cli.py
-- 🟡 Intermediate: download.py, clean.py, figures.py
-- 🟠 Advanced: crowding.py, drawdowns.py, predict.py
+-  Beginner: config.py, cli.py
+-  Intermediate: download.py, clean.py, figures.py
+-  Advanced: crowding.py, drawdowns.py, predict.py
 
 ---
 
-## 🎯 Common Questions & Where to Find Answers
+##  Common Questions & Where to Find Answers
 
 ### "What does the crowding index mean?"
 → [EXPLANATION.md](../EXPLANATION.md) - Section "What Is Factor Crowding?"
@@ -244,7 +238,7 @@ factor_crowding/
 
 ---
 
-## 🚀 CLI Quick Reference
+##  CLI Quick Reference
 
 ```bash
 # Full analysis pipeline (most common)
@@ -269,7 +263,7 @@ factor-crowding run --help
 
 ---
 
-## 📊 Key Files to Examine
+##  Key Files to Examine
 
 ### Input Data (after download):
 ```
@@ -309,7 +303,7 @@ outputs/figures/
 
 ---
 
-## 🎓 Learning Resources by Topic
+##  Learning Resources by Topic
 
 ### Financial Concepts:
 - **Factor Investing**: [EXPLANATION.md](../EXPLANATION.md) - "What Are the Factors?" section
@@ -333,7 +327,7 @@ outputs/figures/
 
 ---
 
-## 💡 Next Steps After Reading
+##  Next Steps After Reading
 
 ### If you understood the research:
 - Share findings with colleagues
@@ -360,7 +354,7 @@ outputs/figures/
 
 ---
 
-## 📞 Getting Help
+##  Getting Help
 
 ### Issues with installation or running:
 - Check [README.md](../README.md) - Installation section
@@ -379,35 +373,6 @@ outputs/figures/
 
 ---
 
-## ✅ Checklist: "Have I Read Enough?"
-
-Before coding, you should be able to answer:
-- [ ] What are the four factors being analyzed?
-- [ ] What does "crowding" mean in this context?
-- [ ] What is the main research finding? (crowding predicts crashes)
-- [ ] Where is the crowding index calculated? (features/crowding.py)
-- [ ] Where is crash detection done? (analysis/drawdowns.py)
-- [ ] What is the AUC score? (0.88)
-- [ ] How do I run the full analysis? (factor-crowding run)
-
-If yes to all → You're ready to use/modify the code! 🎉
-
-If no → Read the documents matched to your "no" answers.
-
----
-
-## 📝 Document Version History
-
-- **2026-01-18**: Initial complete documentation suite created
-  - EXPLANATION.md: Research findings explained
-  - RESULTS_SUMMARY.txt: Quick results overview
-  - CODE_ARCHITECTURE.md: Complete code structure guide
-  - CODE_WALKTHROUGH.md: Detailed code annotations
-  - QUICK_REFERENCE.md: Copy-paste recipes
-  - This INDEX.md: Navigation guide
-
----
-
-**Happy Learning! 📚🚀**
+**Happy Learning! **
 
 For the most up-to-date information, always check the GitHub repository.

@@ -86,7 +86,7 @@ class AnalysisConfig:
 
     # Random seed for reproducibility
     # Same seed = same train/test split every time
-    random_state: int = 42  # Why 42? Hitchhiker's Guide reference 😊
+    random_state: int = 42  # Why 42? Hitchhiker's Guide reference
 
     # Forward-looking window for prediction
     forward_window: int = 5  # Predict crashes 5 days ahead

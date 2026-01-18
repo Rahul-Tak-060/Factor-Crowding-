@@ -4,7 +4,7 @@ This guide provides **copy-paste ready code** for common tasks you might want to
 
 ---
 
-## 📖 Reading Data
+##  Reading Data
 
 ### Load Master Dataset
 ```python
@@ -57,7 +57,7 @@ print(f"Number of crash episodes: {len(episodes)}")
 
 ---
 
-## 📊 Basic Analysis
+##  Basic Analysis
 
 ### Compute Summary Statistics
 ```python
@@ -130,7 +130,7 @@ print(f"\nDays with VIX > 30: {len(high_vix)} ({len(high_vix)/len(df)*100:.1f}%)
 
 ---
 
-## 🔧 Custom Crowding Measures
+##  Custom Crowding Measures
 
 ### Create Your Own Crowding Signal
 ```python
@@ -188,7 +188,7 @@ result.to_csv('custom_crowding.csv')
 
 ---
 
-## 📈 Visualization Recipes
+##  Visualization Recipes
 
 ### Plot Time Series
 ```python
@@ -305,7 +305,7 @@ plt.show()
 
 ---
 
-## 🤖 Running Models
+##  Running Models
 
 ### Predict Crashes with Custom Features
 ```python
@@ -395,7 +395,7 @@ plt.show()
 
 ---
 
-## 🔍 Debugging & Inspection
+##  Debugging & Inspection
 
 ### Check Data Quality
 ```python
@@ -484,7 +484,7 @@ print(f"Co-movement proxy:     {time_comov:.2f} s")
 
 ---
 
-## 📤 Export Results
+##  Export Results
 
 ### Create Summary Report
 ```python
@@ -575,7 +575,7 @@ print("Excel file saved: factor_crowding_results.xlsx")
 
 ---
 
-## 🎯 Quick Command Reference
+##  Quick Command Reference
 
 ```bash
 # Run full analysis pipeline

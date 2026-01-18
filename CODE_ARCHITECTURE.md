@@ -10,22 +10,22 @@ This guide provides a **structured learning path** through the codebase, ordered
 
 ```
 factor_crowding/
-├── 📋 config.py              [START HERE] - Configuration dataclasses
-├── 📊 data/
+├──  config.py              [START HERE] - Configuration dataclasses
+├──  data/
 │   ├── __init__.py           - Package initialization
 │   ├── download.py           [READ 2nd] - Data acquisition from APIs
 │   └── clean.py              [READ 3rd] - Data alignment and preprocessing
-├── 🔧 features/
+├──  features/
 │   └── crowding.py           [READ 4th] - Crowding index construction
-├── 📈 analysis/
+├──  analysis/
 │   └── drawdowns.py          [READ 5th] - Drawdown and crash detection
-├── 🤖 models/
+├──  models/
 │   └── predict.py            [READ 6th] - Predictive modeling
-├── 📊 report/
+├──  report/
 │   └── figures.py            [READ 7th] - Visualization generation
-├── 🔨 utils/
+├──  utils/
 │   └── logging_config.py     [OPTIONAL] - Logging utilities
-└── 💻 cli.py                 [READ 8th] - Command-line interface
+└──  cli.py                 [READ 8th] - Command-line interface
 
 tests/                        [READ 9th] - Unit tests for all modules
 ├── test_config.py
@@ -43,11 +43,11 @@ Configuration Files:
 
 ---
 
-## 🎓 Learning Path: Read in This Order
+##  Learning Path: Read in This Order
 
 ### Level 1: Foundation (Configuration & Data Structures)
 
-#### 1️⃣ **config.py** - Understanding the Data Model
+#### 1️ **config.py** - Understanding the Data Model
 **Why read first**: Defines all configuration objects used throughout the codebase.
 
 **File**: [factor_crowding/config.py](factor_crowding/config.py)
@@ -82,7 +82,7 @@ class LoggingConfig:
 
 ### Level 2: Data Acquisition (Understanding Financial Data)
 
-#### 2️⃣ **data/download.py** - Fetching Market Data
+#### 2️ **data/download.py** - Fetching Market Data
 **Why read second**: Shows how to acquire real financial data from APIs.
 
 **File**: [factor_crowding/data/download.py](factor_crowding/data/download.py)
@@ -130,7 +130,7 @@ Yahoo Finance              download_etf_data()        MTUM_daily.csv, etc.
 
 ---
 
-#### 3️⃣ **data/clean.py** - Data Alignment and Preprocessing
+#### 3️ **data/clean.py** - Data Alignment and Preprocessing
 **Why read third**: Shows how to merge different data sources into one dataset.
 
 **File**: [factor_crowding/data/clean.py](factor_crowding/data/clean.py)
@@ -189,7 +189,7 @@ Raw CSVs → Load → Compute Returns → Align → Merge → Filter → Validat
 
 ### Level 3: Feature Engineering (Crowding Measurement)
 
-#### 4️⃣ **features/crowding.py** - The Heart of the Research
+#### 4️ **features/crowding.py** - The Heart of the Research
 **Why read fourth**: This is our main research contribution - measuring crowding.
 
 **File**: [factor_crowding/features/crowding.py](factor_crowding/features/crowding.py)
@@ -289,7 +289,7 @@ Average          Average          Average
 
 ### Level 4: Risk Analysis (Drawdowns & Crashes)
 
-#### 5️⃣ **analysis/drawdowns.py** - Measuring Crashes
+#### 5️ **analysis/drawdowns.py** - Measuring Crashes
 **Why read fifth**: Defines what a "crash" means quantitatively.
 
 **File**: [factor_crowding/analysis/drawdowns.py](factor_crowding/analysis/drawdowns.py)
@@ -381,7 +381,7 @@ Price
 
 ### Level 5: Predictive Modeling (Machine Learning)
 
-#### 6️⃣ **models/predict.py** - Forecasting Crashes
+#### 6️ **models/predict.py** - Forecasting Crashes
 **Why read sixth**: Combines everything into a predictive model.
 
 **File**: [factor_crowding/models/predict.py](factor_crowding/models/predict.py)
@@ -495,7 +495,7 @@ Returns      Volatility                                         Confusion Matrix
 
 ### Level 6: Visualization (Communication)
 
-#### 7️⃣ **report/figures.py** - Publication-Quality Plots
+#### 7️ **report/figures.py** - Publication-Quality Plots
 **Why read seventh**: Learn how to communicate results visually.
 
 **File**: [factor_crowding/report/figures.py](factor_crowding/report/figures.py)
@@ -595,7 +595,7 @@ plt.savefig('figure.png', dpi=300, bbox_inches='tight')
 
 ### Level 7: Integration (Putting It All Together)
 
-#### 8️⃣ **cli.py** - Command-Line Interface
+#### 8️ **cli.py** - Command-Line Interface
 **Why read eighth**: See how all modules work together.
 
 **File**: [factor_crowding/cli.py](factor_crowding/cli.py)
@@ -709,7 +709,7 @@ Outputs saved to: D:\VS_Code\Factor_Crowding\outputs
 
 ### Level 8: Testing (Quality Assurance)
 
-#### 9️⃣ **tests/** - Ensuring Correctness
+#### 9️ **tests/** - Ensuring Correctness
 **Why read last**: Understand how to verify code works correctly.
 
 **File**: Multiple test files
@@ -880,7 +880,7 @@ with open('file.csv', 'w') as f:
 
 ---
 
-## 📖 Recommended Reading Order for Learning
+##  Recommended Reading Order for Learning
 
 ### Beginner Path (Focus on understanding concepts):
 1. `config.py` - Data structures
@@ -908,7 +908,7 @@ with open('file.csv', 'w') as f:
 
 ---
 
-## 🎯 Learning Challenges
+##  Learning Challenges
 
 After reading each module, try these:
 
@@ -944,7 +944,7 @@ After reading each module, try these:
 
 ---
 
-## 📚 External Resources for Deeper Learning
+##  External Resources for Deeper Learning
 
 ### Python Libraries:
 - **Pandas**: https://pandas.pydata.org/docs/user_guide/
@@ -964,7 +964,7 @@ After reading each module, try these:
 
 ---
 
-## 🤝 Contributing to the Codebase
+##  Contributing to the Codebase
 
 If you want to extend this project:
 
@@ -1001,4 +1001,4 @@ If you want to extend this project:
 - ✓ Can suggest one improvement or extension
 - ✓ Can explain why it's designed this way
 
-Happy learning! 🚀
+Happy learning!
