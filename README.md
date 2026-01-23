@@ -93,9 +93,27 @@ pip install uv
 
 # Create environment and install
 uv venv
-.venv\Scripts\activate  # Windows
-# source .venv/bin/activate  # macOS/Linux
+```
 
+**Activate the virtual environment:**
+
+macOS / Linux (bash/zsh):
+```bash
+source .venv/bin/activate
+```
+
+Windows PowerShell:
+```powershell
+.venv\Scripts\Activate.ps1
+```
+
+Windows cmd:
+```cmd
+.venv\Scripts\activate.bat
+```
+
+**Install dependencies:**
+```bash
 uv pip install -e ".[dev]"
 ```
 
@@ -229,6 +247,28 @@ crash_next_5d ~ crowding_index + vix + mom_vol_20d + mom_ret_20d + mkt_ret_20d +
 ✅ **Recent gains predict reversals:** Strongest predictor is 20-day market run-up (coef: +5.28) - "buy the top" effect before crashes
 
 ✅ **Validated against major events:** Model captures Taper Tantrum (2013), COVID crash (March 2020), and other known market dislocations
+
+---
+
+## Key Figures
+
+### Crowding Index Over Time
+
+![Crowding Index Timeseries](outputs/figures/crowding_index_timeseries.png)
+
+The composite crowding index from 2013-2024, with high-VIX stress regimes indicated. Notice spikes during market dislocations (2018 vol spike, COVID crash, 2022 bear market).
+
+### Crash Probability by Crowding Decile
+
+![ROC Curve](outputs/figures/roc_curve.png)
+
+Model performance showing excellent discrimination (AUC = 0.88). The curve demonstrates that crowding-based features effectively separate crash events from normal periods.
+
+### Event Study Around Crash Dates
+
+![Conditional Returns 5-Day](outputs/figures/conditional_returns_5d.png)
+
+Average 5-day forward returns by crowding decile. High crowding deciles show significantly higher volatility and downside risk compared to low crowding periods.
 
 ---
 
