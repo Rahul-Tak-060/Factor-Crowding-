@@ -1,14 +1,27 @@
 """Data download module for fetching factor, market, and ETF data."""
 
+import inspect
 import io
 import zipfile
 from pathlib import Path
 
 import pandas as pd
-import pandas_datareader.data as web
+from pandas.util import _decorators as _pd_decorators
 import requests
 import yfinance as yf
 from tqdm import tqdm
+
+# pandas>=1.5 changed deprecate_kwarg signature to require a warning class; patch for
+# pandas_datareader which still calls the older two-arg form.
+if "klass" in inspect.signature(_pd_decorators.deprecate_kwarg).parameters:
+    _orig_deprecate_kwarg = _pd_decorators.deprecate_kwarg
+
+    def _compat_deprecate_kwarg(old_arg_name: str, new_arg_name: str | None = None, mapping=None, stacklevel: int = 2):
+        return _orig_deprecate_kwarg(FutureWarning, old_arg_name, new_arg_name, mapping=mapping, stacklevel=stacklevel)
+
+    _pd_decorators.deprecate_kwarg = _compat_deprecate_kwarg
+
+import pandas_datareader.data as web
 
 from factor_crowding.config import data_config
 from factor_crowding.utils import setup_logger
@@ -133,8 +146,9 @@ class DataDownloader:
                     df = df.iloc[: min(all_stop_points)]
 
                 # Set date as index
-                df.iloc[:, 0] = pd.to_datetime(df.iloc[:, 0], format="%Y%m%d")
-                df.set_index(df.columns[0], inplace=True)
+                first_col = df.columns[0]
+                df[first_col] = pd.to_datetime(df[first_col].astype(str), format="%Y%m%d")
+                df.set_index(first_col, inplace=True)
 
                 # Convert to numeric (they're in percentage points, will convert later)
                 for col in df.columns:
